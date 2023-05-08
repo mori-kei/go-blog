@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  # 追加
+  backend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-golang
+    ports:
+      - 4000:4000
+    volumes:
+      - ./backend-app:/app
